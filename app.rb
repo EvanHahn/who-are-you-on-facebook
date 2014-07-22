@@ -19,7 +19,7 @@ get "/test" do
   user = params[:user]
 
   results[id] = {} if results[id].nil?
-  results[id][user] = false
+  results[id][user] = true
 
   policy = make_policy_for user
   headers \
@@ -37,7 +37,7 @@ post "/report" do
   id = query["id"].first
   user = query["user"].first
 
-  results[id][user] = true
+  results[id][user] = false
 
   status 200
 end
