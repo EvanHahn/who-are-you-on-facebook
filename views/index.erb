@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="noscript">
+<head>
+
+<meta charset="utf-8">
+<link rel="stylesheet" href="/pure.css">
+<link rel="stylesheet" href="/the.css">
+<title>What's your Facebook username?</title>
+
+</head>
+<body>
+
+<h1>What's your Facebook username?</h1>
+
+<p><a href="http://words.zemn.me/csp">Zemnmez</a> reported an exploit in which I can tell who you're logged in as on Facebook!</p>
+
+<noscript><p>It needs JavaScript to work, though. Please enable it to try this!</p></noscript>
+
+<form class="yesscript pure-form">
+
+  <p>Here's how to use this:</p>
+
+  <ol>
+    <li>Make sure you're logged in on Facebook.</li>
+    <li>Enter some usernames in the box below. Make sure one of them is <em>your</em> username.</li>
+    <li>Press go!</li>
+  </ol>
+
+  <script src="/jquery.js"></script>
+  <script src="/the.js"></script>
+
+  <fieldset>
+    <input name="users" placeholder="zuck zeus yourname" type="text" class="pure-input-1" autofocus required>
+  </fieldset>
+  <fieldset>
+    <input type="submit" class="pure-button pure-button-primary" value="Go!">
+  </fieldset>
+
+</form>
+
+<ul id="userlist"></ul>
+
+<div id="iframeland"></div>
+
+</body>
+</html>
