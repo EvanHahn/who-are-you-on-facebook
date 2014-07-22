@@ -13,8 +13,11 @@ $(function() {
 
   var $input = $("input[name=users]");
   var $submit = $("input[type=submit]");
+  var $loading = $("#loading");
   var $userlist = $("#userlist");
   var $iframeland = $("#iframeland");
+
+  $loading.hide();
 
   $("form").on("submit", function(event) {
 
@@ -65,10 +68,12 @@ $(function() {
 
       ajax.always(function() {
         $submit.attr("disabled", false);
+        $loading.hide();
       });
     };
 
     $submit.attr("disabled", true);
+    $loading.show();
 
   });
 
