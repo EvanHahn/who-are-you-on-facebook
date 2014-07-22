@@ -47,12 +47,11 @@ get "/results" do
   result = results[id]
   results.delete id
 
+  content_type :json
   if result.nil?
     status 404
-    content_type :json
     '{ "error": "Resource not found." }'
   else
-    content_type :json
     result.to_json
   end
 end
