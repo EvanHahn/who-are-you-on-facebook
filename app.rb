@@ -33,7 +33,7 @@ end
 post "/report" do
   report = JSON.parse(request.body.read)["csp-report"]
   original_uri = URI(report["document-uri"])
-  query = CGI::parse(original_uri.query)
+  query = CGI::parse original_uri.query
   id = query["id"].first
   user = query["user"].first
 
